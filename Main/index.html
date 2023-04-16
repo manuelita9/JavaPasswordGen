@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a password</h2>
+        </div>
+        <div class="card-body">
+          <textarea readonly id="password" placeholder="Your Unique Secure Password" aria-label="Generated Password"></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" onclick="writePassword()">Generate Password</button>
+        </div>
+        <div>
+          <select id="numberSelect"></select>
+          <script>
+            const select = document.querySelector('#numberSelect');
+            for (let i = 8; i <= 128; i++) {
+              const option = document.createElement('option');
+              option.value = i;
+              option.text = i;
+              select.add(option);
+            }
+          </script>
+        </div>
+        <div>
+          <input type="checkbox" id="cb1" value="Numbers">
+          <label for="cb1">Number</label>
+          <input type="checkbox" id="cb2" value="Uppercase">
+          <label for="cb2">Uppercase</label>
+        </div>
+        <div>
+          <input type="checkbox" id="cb3" value="Lowercase">
+          <label for="cb3">Lowercase</label>
+          <input type="checkbox" id="cb4" value="Symbols">
+          <label for="cb4">Symbol</label>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
