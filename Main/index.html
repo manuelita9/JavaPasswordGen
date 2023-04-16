@@ -20,9 +20,10 @@
           <textarea readonly id="password" placeholder="Your Unique Secure Password" aria-label="Generated Password"></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" onclick="writePassword()">Generate Password</button>
+          <button id="generate" onclick="generatePassword()">Generate Password</button>
         </div>
         <div>
+          <label for="numberSelect">Password Length:</label>
           <select id="numberSelect"></select>
           <script>
             const select = document.querySelector('#numberSelect');
@@ -36,15 +37,15 @@
         </div>
         <div>
           <input type="checkbox" id="cb1" value="Numbers">
-          <label for="cb1">Number</label>
+          <label for="cb1">Numbers</label>
           <input type="checkbox" id="cb2" value="Uppercase">
-          <label for="cb2">Uppercase</label>
+          <label for="cb2">Uppercase Letters</label>
         </div>
         <div>
           <input type="checkbox" id="cb3" value="Lowercase">
-          <label for="cb3">Lowercase</label>
+          <label for="cb3">Lowercase Letters</label>
           <input type="checkbox" id="cb4" value="Symbols">
-          <label for="cb4">Symbol</label>
+          <label for="cb4">Symbols</label>
         </div>
       </div>
     </div>
